@@ -8,7 +8,11 @@ interface MemberTileProps {
 export default function MemberTile({ member }: MemberTileProps) {
     return (
         <div className="border border-gray-600 rounded p-6 shadow-lg hover:shadow space-y-4 transition ease-in-out duration-150">
-            {/* <img src={`https://hackforums.net/uploads/avatars/avatar_${member.hf_uid}.gif`} alt="" /> */}
+            {/* <img
+                src={`https://hackforums.net/uploads/avatars/avatar_${member.hf_uid}.gif`}
+                onError={(event) => event.target.setAttribute('src', `https://hackforums.net/uploads/avatars/avatar_${member.hf_uid}.jpeg`)}
+                alt=""
+            /> */}
             <div className="flex flex-row items-centerz flex-wrap">
                 <p className="text-2xl font-extrabold mr-4">{member.username}</p>
                 <CopyToClipboard onCopy={() => alert(`${member.discord} copied to clipboard.`)} text={member.discord}>
