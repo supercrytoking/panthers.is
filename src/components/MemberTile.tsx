@@ -1,11 +1,24 @@
 import useSWR from 'swr'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import axios from 'axios'
 
 interface MemberTileProps {
     member: any
 }
 
+const fetcher = (url) => axios.get(url, { headers: { Authorization: 'awu41DtgqjVdJWWMW1VrWA5TSDIwRwo2sbI5hvzD' } }).then((res) => res.data)
+
 export default function MemberTile({ member }: MemberTileProps) {
+    const reqStructure = {
+        me: {
+            uid: true,
+            username: true,
+            usergroup: true
+        }
+    }
+
+    const { data } = useSWR(`https://hackforums.net/api/v2/read?asks=${encodeURIComponent(JSON.stringify(reqStructure))}`, fetcher)
+
     return (
         <div className="border border-gray-600 rounded p-6 shadow-lg hover:shadow space-y-4 transition ease-in-out duration-150">
             {/* <img
