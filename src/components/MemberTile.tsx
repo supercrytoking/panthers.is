@@ -9,23 +9,8 @@ interface MemberTileProps {
 const fetcher = (url) => axios.get(url, { headers: { Authorization: 'Bearer awu41DtgqjVdJWWMW1VrWA5TSDIwRwo2sbI5hvzD' } }).then((res) => res.data)
 
 export default function MemberTile({ member }: MemberTileProps) {
-    const reqStructure = {
-        me: {
-            uid: true,
-            username: true,
-            usergroup: true
-        }
-    }
-
-    const { data } = useSWR(`https://hackforums.net/api/v2/read?asks=${encodeURIComponent(JSON.stringify(reqStructure))}`, fetcher)
-
     return (
         <div className="border border-gray-600 rounded p-6 shadow-lg hover:shadow space-y-4 transition ease-in-out duration-150">
-            {/* <img
-                src={`https://hackforums.net/uploads/avatars/avatar_${member.hf_uid}.gif`}
-                onError={(event) => event.target.setAttribute('src', `https://hackforums.net/uploads/avatars/avatar_${member.hf_uid}.jpeg`)}
-                alt=""
-            /> */}
             <div className="flex flex-row items-centerz flex-wrap">
                 <p className="text-2xl font-extrabold mr-4">{member.username}</p>
                 <CopyToClipboard onCopy={() => alert(`${member.discord} copied to clipboard.`)} text={member.discord}>
