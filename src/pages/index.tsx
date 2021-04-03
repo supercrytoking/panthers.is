@@ -27,7 +27,7 @@ export default function App() {
                             {/* <p className="mx-auto border border-gray-400 px-2 py-3 inline-block">Join the Panthers</p> */}
                         </div>
 
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {Members.map((member, index) => (
                                 <MemberTile key={index} member={member} />
                             ))}
