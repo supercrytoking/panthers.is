@@ -18,11 +18,11 @@ export default function App() {
                             </div>
                             <h1 className="font-serif font-bold text-6xl">Panthers</h1>
                             <div className=" border-l border-gray-400 pl-4  space-y-4">
-                                <h2 className="text-2xl font-light">
+                                <h2 className="text-xl md:text-2xl font-light">
                                     "Panthers is a community which revolves around helping each other, in fact the main concept behind the group is to allow each and every member to benefit from the group's knowledge and
                                     power, and this can only be achieved through the process of members supporting each other, which will only be beneficial for the entire community."
                                 </h2>
-                                <h3>- Zues, Panthers Leader</h3>
+                                <h3>- Zeus, Panthers Leader</h3>
                             </div>
                             {/* <p className="mx-auto border border-gray-400 px-2 py-3 inline-block">Join the Panthers</p> */}
                         </div>
