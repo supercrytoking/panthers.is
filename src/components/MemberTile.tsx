@@ -9,7 +9,7 @@ export default function MemberTile({ member }: MemberTileProps) {
     return (
         <div className="border border-gray-600 rounded p-6 shadow-lg hover:shadow space-y-4 transition ease-in-out duration-150">
             {/* <img src={`https://hackforums.net/uploads/avatars/avatar_${member.hf_uid}.gif`} alt="" /> */}
-            <div className="flex flex-row items-center">
+            <div className="flex flex-row items-centerz flex-wrap">
                 <p className="text-2xl font-extrabold mr-4">{member.username}</p>
                 <CopyToClipboard onCopy={() => alert(`${member.discord} copied to clipboard.`)} text={member.discord}>
                     <p className="group hover:underline font-mono bg-white bg-opacity-10 rounded px-2 py-1 text-xs flex flex-row items-center">

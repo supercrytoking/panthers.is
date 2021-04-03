@@ -6,7 +6,7 @@ export default function App() {
     return (
         <>
             {/* <Loader /> */}
-            <div className="min-h-screen flex text-gray-400 font-mono" style={{ backgroundColor: '#454545' }}>
+            <div className="min-h-screen flex text-gray-400 font-mono">
                 <div className="m-auto p-6 py-24 max-w-7xl w-full space-y-8">
                     <div className="space-y-24">
                         <div className="space-y-4 max-w-lg mx-auto">
