@@ -6,7 +6,7 @@ interface MemberTileProps {
     member: any
 }
 
-const fetcher = (url) => axios.get(url, { headers: { Authorization: 'awu41DtgqjVdJWWMW1VrWA5TSDIwRwo2sbI5hvzD' } }).then((res) => res.data)
+const fetcher = (url) => axios.get(url, { headers: { Authorization: 'Bearer awu41DtgqjVdJWWMW1VrWA5TSDIwRwo2sbI5hvzD' } }).then((res) => res.data)
 
 export default function MemberTile({ member }: MemberTileProps) {
     const reqStructure = {
