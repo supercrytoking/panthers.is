@@ -20,6 +20,7 @@ export default function App() {
                                 </div>
                             </div>
                             <h1 className="font-serif font-bold text-6xl">Panthers</h1>
+
                             <div className=" border-l border-gray-400 pl-4  space-y-4">
                                 <h2 className="text-xl md:text-2xl font-light">
                                     "Panthers is a community which revolves around helping each other, in fact the main concept behind the group is to allow each and every member to benefit from the group's knowledge and
@@ -30,14 +31,18 @@ export default function App() {
                             {/* <p className="mx-auto border border-gray-400 px-2 py-3 inline-block">Join the Panthers</p> */}
                         </div>
 
+                        <div>
+                            <Snake />
+                        </div>
+
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {Members.map((member, index) => (
                                 <MemberTile key={index} member={member} />
                             ))}
                         </div>
-                        <div className="h-96">
+                        {/* <div className="h-96">
                             <Snake />
-                        </div>
+                        </div> */}
 
                         <p className="text-center font-mono space-y-2">
                             <p>&copy; {new Date().getFullYear()} PANTHERS</p>

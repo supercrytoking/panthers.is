@@ -1,9 +1,5 @@
-import Snake from 'react-snake-game'
+import Snake from 'react-simple-snake'
 
 export default function WrappedSnake() {
-    return (
-        // <div className="fixed inset-0 opacity-10">
-        <Snake sound={false} />
-        // </div>
-    )
+    return <Snake />
 }

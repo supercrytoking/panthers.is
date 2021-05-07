@@ -17,6 +17,8 @@
         "react-addons-css-transition-group": "^15.6.2",
         "react-copy-to-clipboard": "^5.0.3",
         "react-dom": "^17.0.1",
+        "react-game-snake": "^1.0.4",
+        "react-simple-snake": "^0.2.2",
         "react-snake-game": "^1.0.9",
         "react-typist": "^2.0.5",
         "swr": "^0.5.5",
