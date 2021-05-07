@@ -1,6 +1,9 @@
+import dynamic from 'next/dynamic'
 import Loader from '../components/Loader'
 import MemberTile from '../components/MemberTile'
 import Members from '../members.json'
+
+const Snake = dynamic(() => import('../components/Snake'))
 
 export default function App() {
     return (
@@ -31,6 +34,9 @@ export default function App() {
                             {Members.map((member, index) => (
                                 <MemberTile key={index} member={member} />
                             ))}
+                        </div>
+                        <div className="h-96">
+                            <Snake />
                         </div>
 
                         <p className="text-center font-mono space-y-2">
