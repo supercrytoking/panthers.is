@@ -3,7 +3,7 @@ import Loader from '../components/Loader'
 import MemberTile from '../components/MemberTile'
 import Members from '../members.json'
 
-const Snake = dynamic(() => import('../components/Snake'))
+const Snake = dynamic(() => import('../components/Snake'), { ssr: false })
 
 export default function App() {
     return (
